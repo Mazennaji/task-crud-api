@@ -211,11 +211,13 @@ docker compose exec db psql -U taskuser -d taskdb -c "SELECT * FROM tasks;"
 
 (swap `taskuser` / `taskdb` for whatever you set in `.env`). Try updating a row directly in `psql`, then call `GET /tasks` — the change shows up immediately, proof the API reads live from Postgres rather than any cached copy.
 
+![Querying the tasks table directly in the database browser](./db-browser-screenshot.png)
+
 ## Interactive Docs (Swagger UI)
 
 FastAPI generates a full interactive spec automatically — no extra setup required.
 
-Screenshot placeholder — replace with your own image of `http://localhost:8000/docs`.
+![Swagger UI at /docs listing every endpoint](./swagger-screenshot.png)
 
 Every endpoint above is listed with a **Try it out** button that sends real requests and shows real responses, directly in the browser.
 
